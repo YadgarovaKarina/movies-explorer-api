@@ -15,7 +15,7 @@ import { requestLogger, errorLogger } from './middlewares/logger.js';
 
 const app = express();
 
-const { PORT = 3000, NODE_ENV = 'development' } = process.env;
+const { PORT = 3002, NODE_ENV = 'development' } = process.env;
 
 const config = dotenv.config({ path: NODE_ENV === 'production' ? '.env' : '.env.common' }).parsed;
 
