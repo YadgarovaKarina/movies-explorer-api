@@ -1,3 +1,3 @@
 # Дипломный проект Я.Практикума (Backend)
 
-Ссылка: api.movies.yadgarova.k.nomoredomains.club
+Ссылка: https://api.movies.yadgarova.k.nomoredomains.club
