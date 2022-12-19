@@ -18,6 +18,7 @@ export const movieBodyValidator = celebrate({
     image: Joi.string().pattern(urlSchema).uri({ scheme: ['http', 'https'] }).required(),
     trailerLink: Joi.string().pattern(urlSchema).uri({ scheme: ['http', 'https'] }).required(),
     thumbnail: Joi.string().pattern(urlSchema).uri({ scheme: ['http', 'https'] }).required(),
+    movieId: Joi.number().min(2).required(),
     nameRU: Joi.string().min(2).required(),
     nameEN: Joi.string().min(2).required(),
   }),
