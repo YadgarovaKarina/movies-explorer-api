@@ -10,7 +10,7 @@ export const movieIdValidator = celebrate({
 
 export const movieBodyValidator = celebrate({
   [Segments.BODY]: Joi.object({
-    country: Joi.string().min(2).max(30).required(),
+    country: Joi.string().min(2).required(),
     director: Joi.string().min(2).required(),
     duration: Joi.number().required(),
     year: Joi.string().min(4).max(4).required(),
@@ -18,7 +18,7 @@ export const movieBodyValidator = celebrate({
     image: Joi.string().pattern(urlSchema).uri({ scheme: ['http', 'https'] }).required(),
     trailerLink: Joi.string().pattern(urlSchema).uri({ scheme: ['http', 'https'] }).required(),
     thumbnail: Joi.string().pattern(urlSchema).uri({ scheme: ['http', 'https'] }).required(),
-    movieId: Joi.number().min(2).required(),
+    movieId: Joi.number().min(0).required(),
     nameRU: Joi.string().min(2).required(),
     nameEN: Joi.string().min(2).required(),
   }),

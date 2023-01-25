@@ -15,4 +15,4 @@ export const router = Router();
 
 router.get('/', movieBodyValidator, getMovies);
 router.post('/', movieBodyValidator, createMovie);
-router.delete('/:cardId', movieIdValidator, deleteMovie);
+router.delete('/:movieId', movieIdValidator, deleteMovie);

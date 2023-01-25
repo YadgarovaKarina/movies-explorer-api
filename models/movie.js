@@ -4,13 +4,12 @@ import isUrl from 'validator/lib/isURL.js';
 const movieSchema = new mongoose.Schema({
   country: {
     type: String,
-    minlength: 2,
-    maxlength: 30,
+    minLength: 2,
     required: true,
   },
   director: {
     type: String,
-    minlength: 2,
+    minLength: 2,
     required: true,
   },
   duration: {
@@ -23,7 +22,7 @@ const movieSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    minlength: 2,
+    minLength: 2,
     required: true,
   },
   image: {
@@ -57,17 +56,16 @@ const movieSchema = new mongoose.Schema({
   },
   movieId: {
     type: Number,
-    minlength: 2,
     required: true,
   },
   nameRU: {
     type: String,
-    minlength: 2,
+    minLength: 2,
     required: true,
   },
   nameEN: {
     type: String,
-    minlength: 2,
+    minLength: 2,
     required: true,
   },
 });
