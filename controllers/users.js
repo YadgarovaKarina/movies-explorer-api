@@ -63,11 +63,14 @@ export const readOne = (req, res, next) => {
 export const updateUserProfile = (req, res, next) => {
   const { name, email } = req.body;
   const userId = req.user._id;
+  console.log('Попали бэк');
   User.findByIdAndUpdate(userId, { name, email }, { new: true })
     .then((user) => res.send(user))
     .catch((err) => {
       if (err.name === 'CastError' || err.name === 'ValidationError') {
         next(new BadRequestError('Введены некорректные данные'));
+      } else if (err.code === 11000) {
+        next(new ConflictError('Пользователь с такой почтой уже зарегистрирован'));
       } else {
         next(new ServerError('На сервере произошла ошибка'));
       }
